@@ -1,0 +1,9 @@
+RewriteEngine On # Turn on the rewriting engine
+RewriteRule ^availability/?$ availability.php [NC,L]
+RewriteRule ^availability/([0-9]+)/?$ availability.php?id=$1 [NC,L]
+RewriteRule ^allot/?$ allot.php [NC,L]
+RewriteRule ^allot/([0-9]+)/?$ allot.php?id=$1 [NC,L]
+
+Header add Access-Control-Allow-Origin "*"
+Header add Access-Control-Allow-Headers "X-Requested-With, Content-Type, Accept, Origin, Authorization"
+Header add Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
